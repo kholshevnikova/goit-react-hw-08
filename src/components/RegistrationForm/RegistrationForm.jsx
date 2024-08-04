@@ -54,6 +54,7 @@ export default function RegistrationForm() {
               value={values.password}
               onChange={handleChange}
             />
+
             <Button type="submit" variant="contained">
               {isRegistering ? "Registering" : "Register"}
             </Button>
