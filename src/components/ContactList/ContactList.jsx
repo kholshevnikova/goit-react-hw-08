@@ -17,7 +17,12 @@ export default function ContactList() {
     // </ul>
     <List>
       {filteredContacts.map((contact) => (
-        <ListItem key={contact.id}>
+        <ListItem
+          key={contact.id}
+          sx={{
+            paddingLeft: "0px",
+          }}
+        >
           <Contact contact={contact} />
         </ListItem>
       ))}

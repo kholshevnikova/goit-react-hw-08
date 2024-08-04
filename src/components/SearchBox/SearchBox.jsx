@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/filters/slice";
 import css from "./SearchBox.module.css";
+import { TextField } from "@mui/material";
 
 export default function SearchBox() {
   const dispatch = useDispatch();
@@ -12,7 +13,8 @@ export default function SearchBox() {
   return (
     <div>
       <p className={css.searchText}>Find contacts by name</p>
-      <input type="text" onChange={handleChange} />
+      {/* <input type="text" onChange={handleChange} /> */}
+      <TextField type="text" onChange={handleChange} />
     </div>
   );
 }

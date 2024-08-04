@@ -24,18 +24,26 @@ export default function Contact({ contact }) {
     // </div>
     <Card variant="outlined" sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 16 }} color="text.primary" gutterBottom>
+        <Typography
+          sx={{ fontSize: 16, display: "flex", gap: "8px" }}
+          color="text.primary"
+          gutterBottom
+        >
           <FaUserAlt />
           {contact.name}
         </Typography>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography
+          sx={{ fontSize: 14, display: "flex", gap: "8px" }}
+          color="text.secondary"
+          gutterBottom
+        >
           <FaPhoneAlt />
           {contact.number}
         </Typography>
         <Button
           variant="outlined"
           color="error"
-          size="small"
+          size="medium"
           onClick={handleDelete}
         >
           Delete

@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations";
 import Loading from "../../components/Loading/Loading";
 import Error from "../../components/Error/Error";
+import css from "./ContactsPage.module.css";
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export default function ContactsPage() {
     dispatch(operation);
   }, [dispatch]);
   return (
-    <div>
+    <div className={css.container}>
       <h2>Your contacts</h2>
       {loading && <Loading />}
       {error && <Error />}
