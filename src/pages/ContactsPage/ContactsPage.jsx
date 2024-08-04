@@ -19,7 +19,7 @@ export default function ContactsPage() {
   }, [dispatch]);
   return (
     <div>
-      <h2>Contacts page title</h2>
+      <h2>Your contacts</h2>
       {loading && <Loading />}
       {error && <Error />}
       <ContactForm />
